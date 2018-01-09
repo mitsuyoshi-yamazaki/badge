@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		ED2BE4301FFE335C005C6939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BE42F1FFE335C005C6939 /* AppDelegate.swift */; };
-		ED2BE4321FFE335C005C6939 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BE4311FFE335C005C6939 /* ViewController.swift */; };
 		ED2BE4351FFE335D005C6939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2BE4331FFE335D005C6939 /* Main.storyboard */; };
 		ED2BE4371FFE335D005C6939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2BE4361FFE335D005C6939 /* Assets.xcassets */; };
 		ED2BE43A1FFE335D005C6939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2BE4381FFE335D005C6939 /* LaunchScreen.storyboard */; };
 		ED2BE4451FFE335D005C6939 /* BadgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BE4441FFE335D005C6939 /* BadgeTests.swift */; };
 		ED2BE4501FFE335D005C6939 /* BadgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BE44F1FFE335D005C6939 /* BadgeUITests.swift */; };
+		EDE3F81F2004C83600D8D760 /* BadgeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE3F81E2004C83600D8D760 /* BadgeListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		ED2BE42C1FFE335C005C6939 /* Badge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2BE42F1FFE335C005C6939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED2BE4311FFE335C005C6939 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED2BE4341FFE335D005C6939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED2BE4361FFE335D005C6939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED2BE4391FFE335D005C6939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		ED2BE44B1FFE335D005C6939 /* BadgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2BE44F1FFE335D005C6939 /* BadgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeUITests.swift; sourceTree = "<group>"; };
 		ED2BE4511FFE335D005C6939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE3F81E2004C83600D8D760 /* BadgeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				ED2BE42F1FFE335C005C6939 /* AppDelegate.swift */,
-				ED2BE4311FFE335C005C6939 /* ViewController.swift */,
+				EDE3F81E2004C83600D8D760 /* BadgeListViewController.swift */,
 				ED2BE4331FFE335D005C6939 /* Main.storyboard */,
 				ED2BE4361FFE335D005C6939 /* Assets.xcassets */,
 				ED2BE4381FFE335D005C6939 /* LaunchScreen.storyboard */,
@@ -259,8 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED2BE4321FFE335C005C6939 /* ViewController.swift in Sources */,
 				ED2BE4301FFE335C005C6939 /* AppDelegate.swift in Sources */,
+				EDE3F81F2004C83600D8D760 /* BadgeListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Badge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.Badge;
@@ -441,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Badge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.Badge;
