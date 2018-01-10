@@ -9,13 +9,17 @@
 import UIKit
 
 protocol IBInstantiatable: DependencyInjectable {
+  func inject(dependency: Dependency)
 }
 
 extension IBInstantiatable where Self: UIViewController {
   static func instantiate(with dependency: Dependency) -> Self {
     let className = String.init(describing: self)
-    let storyboard = UIStoryboard.init(name: className, bundle: nil)
+    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
     
-    return storyboard.instantiateInitialViewController() as! Self
+    let viewController = storyboard.instantiateViewController(withIdentifier: className) as! Self
+    viewController.inject(dependency: dependency)
+    
+    return viewController
   }
 }

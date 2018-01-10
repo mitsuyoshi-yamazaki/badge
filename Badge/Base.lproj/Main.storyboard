@@ -71,13 +71,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ojf-rq-58f">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Wl-ky-lxe">
-                            <connections>
-                                <segue destination="eQ9-Ys-DPT" kind="presentation" id="sRv-Zz-uBw"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Wl-ky-lxe"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="5Wl-ky-lxe" id="vrN-qx-8HS"/>
                         <outlet property="collectionView" destination="8Iw-uU-TjX" id="gJ8-qt-QxE"/>
                     </connections>
                 </viewController>
@@ -85,30 +82,12 @@
             </objects>
             <point key="canvasLocation" x="-718" y="152"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="1RN-6Q-lfQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eQ9-Ys-DPT" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Np-pV-EeK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NgY-aU-Yh5" kind="relationship" relationship="rootViewController" id="Cen-Wj-0K0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyr-Nb-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="142" y="-636"/>
-        </scene>
         <!--New Achievement View Controller-->
         <scene sceneID="aT7-7h-kEG">
             <objects>
-                <tableViewController id="NgY-aU-Yh5" customClass="NewAchievementViewController" customModule="Badge" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NewAchievementViewController" id="NgY-aU-Yh5" customClass="NewAchievementViewController" customModule="Badge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="DWa-Kh-mYE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -176,10 +155,16 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Gzc-8k-TAA"/>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="copperThresholdTextField" destination="Bgs-p0-bic" id="Kvz-Ml-glP"/>
+                        <outlet property="doneButton" destination="Gzc-8k-TAA" id="g82-2W-fFd"/>
+                        <outlet property="titleTextField" destination="O27-lV-naB" id="nas-3o-ckY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ES-94-tDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104.8" y="-636.4317841079461"/>
+            <point key="canvasLocation" x="159" y="152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HyB-HC-Hrw">

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class AchievementCell: UICollectionViewCell {
   @IBOutlet fileprivate weak var titleLabel: UILabel!
@@ -14,14 +16,26 @@ final class AchievementCell: UICollectionViewCell {
 
 final class AchievementListViewController: UIViewController {
   
-  @IBOutlet private weak var collectionView: UICollectionView!
+  private let disposeBag = DisposeBag()
   
+  @IBOutlet private weak var collectionView: UICollectionView!
+  @IBOutlet private weak var addButton: UIBarButtonItem!
+
   private var achievements: [Achievement] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     loadMedals()
+    
+    addButton.rx.tap.asDriver()
+      .drive(onNext: { [weak self] _ in
+        let newAchievementViewController = NewAchievementViewController.instantiate(with: .init())
+        let navigationController = UINavigationController.init(rootViewController: newAchievementViewController)
+        
+        self?.present(navigationController, animated: true, completion: nil)
+      })
+      .disposed(by: disposeBag)
   }
 }
 
