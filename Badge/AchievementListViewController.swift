@@ -31,6 +31,14 @@ final class AchievementListViewController: UIViewController {
     addButton.rx.tap.asDriver()
       .drive(onNext: { [weak self] _ in
         let newAchievementViewController = NewAchievementViewController.instantiate(with: .init())
+        
+        newAchievementViewController.newAchievementDriver
+          .drive(onNext: { [weak self] newAchievement in
+            self?.achievements.append(newAchievement)
+            self?.collectionView.reloadData()
+          })
+          .disposed(by: newAchievementViewController.disposeBag)
+        
         let navigationController = UINavigationController.init(rootViewController: newAchievementViewController)
         
         self?.present(navigationController, animated: true, completion: nil)
