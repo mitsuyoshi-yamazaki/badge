@@ -32,7 +32,12 @@ final class NewAchievementViewController: UITableViewController {
     super.viewDidLoad()
    
     let validators: [Observable<Bool>] = [
-      titleTextField.rx.text.map { $0?.isNotEmpty ?? false }
+      titleTextField.rx.text.map { $0?.isNotEmpty ?? false },  // TODO: Validate no duplication
+      copperThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
+      silverThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
+      goldThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
+      platinumThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
+      onyxThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
     ]
     Observable<Bool>
       .combineLatest(validators) { validationResults -> Bool in

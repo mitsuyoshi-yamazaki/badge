@@ -309,7 +309,12 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="copperThresholdTextField" destination="Cvy-d4-LYV" id="tnG-6f-NDr"/>
                         <outlet property="doneButton" destination="Gzc-8k-TAA" id="g82-2W-fFd"/>
+                        <outlet property="goldThresholdTextField" destination="TfI-Hf-XiY" id="NsA-Ra-ehh"/>
+                        <outlet property="onyxThresholdTextField" destination="REl-Qy-c9C" id="DHy-bV-zbq"/>
+                        <outlet property="platinumThresholdTextField" destination="6OA-tX-wkN" id="6LQ-aA-Kgm"/>
+                        <outlet property="silverThresholdTextField" destination="vZb-bV-yMB" id="026-g6-so9"/>
                         <outlet property="titleTextField" destination="O27-lV-naB" id="nas-3o-ckY"/>
                     </connections>
                 </tableViewController>

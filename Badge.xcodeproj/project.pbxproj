@@ -141,8 +141,8 @@
 			children = (
 				ED2BE42F1FFE335C005C6939 /* AppDelegate.swift */,
 				ED2BE4331FFE335D005C6939 /* Main.storyboard */,
-				EDE3F81E2004C83600D8D760 /* AchievementListViewController.swift */,
 				EDE3F82420060F7200D8D760 /* NewAchievementViewController.swift */,
+				EDE3F81E2004C83600D8D760 /* AchievementListViewController.swift */,
 				EDE3F8202004CDF100D8D760 /* Achievement.swift */,
 				EDE3F8222004CDF700D8D760 /* Event.swift */,
 				EDE3F82620060FD500D8D760 /* UIViewControllerExtensions.swift */,
