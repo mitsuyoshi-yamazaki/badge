@@ -43,7 +43,7 @@ final class NewAchievementViewController: UITableViewController {
       .drive(doneButton.rx.isEnabled)
       .disposed(by: disposeBag)
 
-    doneButton.rx.tap.asDriver()
+    let doneButtonTap = doneButton.rx.tap.asDriver()
       .map { [weak self] _ -> Achievement? in
         guard
           let title = self?.titleTextField.text
@@ -53,7 +53,14 @@ final class NewAchievementViewController: UITableViewController {
         return Achievement.init(title: title, events: [])
       }
       .filterNil()
+      
+    doneButtonTap
       .drive(newAchievementSubject)
+      .disposed(by: disposeBag)
+    
+    doneButtonTap
+      .map { _ in }
+      .drive(self.rx.dismiss)
       .disposed(by: disposeBag)
   }
 }
