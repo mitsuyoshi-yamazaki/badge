@@ -21,12 +21,19 @@ final class AchievementListViewController: UIViewController {
   @IBOutlet private weak var collectionView: UICollectionView!
   @IBOutlet private weak var addButton: UIBarButtonItem!
 
-  private var achievements: [Achievement] = []
+  private var achievements: [Achievement] = [] {
+    didSet {
+      guard achievements.isNotEmpty else {
+        return
+      }
+      saveAchievements()
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    loadMedals()
+    loadAchievements()
     
     addButton.rx.tap.asDriver()
       .drive(onNext: { [weak self] _ in
@@ -48,9 +55,26 @@ final class AchievementListViewController: UIViewController {
 }
 
 private extension AchievementListViewController {
-  func loadMedals() {
+  var userDefaultsKey: String {
+    let bundleID = Bundle.main.bundleIdentifier!
+    return "\(bundleID).achievements"
+  }
+  
+  func loadAchievements() {
+    let defaults = UserDefaults.standard
     
-    achievements = Achievement.loadFixture()
+    guard let data = defaults.value(forKey: userDefaultsKey) as? Data else {
+      achievements = []
+      return
+    }
+    achievements = (try? PropertyListDecoder().decode(Array<Achievement>.self, from: data)) ?? []
+  }
+  
+  func saveAchievements() {
+    let defaults = UserDefaults.standard
+
+    defaults.set(try! PropertyListEncoder().encode(achievements), forKey: userDefaultsKey)
+    defaults.synchronize()
   }
 }
 
