@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 extension UIViewController {
   @IBAction func dismiss(sender: AnyObject) {
     dismiss(animated: true, completion: nil)
+  }
+}
+
+extension Reactive where Base: UIViewController {
+  var dismiss: Binder<Void> {
+    return Binder(self.base) { viewController, _ in
+      viewController.dismiss(animated: true, completion: nil)
+    }
   }
 }
