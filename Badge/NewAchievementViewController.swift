@@ -25,10 +25,7 @@ final class NewAchievementViewController: UITableViewController {
   
   private let newAchievementSubject = PublishSubject<Achievement>.init()
   var newAchievementDriver: Driver<Achievement> {
-    return newAchievementSubject
-      .asDriver(onErrorRecover: { _ -> SharedSequence<DriverSharingStrategy, Achievement> in
-        fatalError("Logic Failure") // https://github.com/apple/swift/blob/master/docs/ErrorHandlingRationale.rst#logic-failures
-      })
+    return newAchievementSubject.asDriver(onErrorDriveWith: Driver.empty())
   }
   
   override func viewDidLoad() {
@@ -42,9 +39,7 @@ final class NewAchievementViewController: UITableViewController {
         let isInvalid = validationResults.contains { $0 == false }
         return isInvalid == false
       }
-      .asDriver { _ -> SharedSequence<DriverSharingStrategy, Bool> in
-        return Driver.just(false)
-      }
+      .asDriver(onErrorDriveWith: Driver.just(false))
       .drive(doneButton.rx.isEnabled)
       .disposed(by: disposeBag)
 
