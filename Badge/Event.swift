@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Event {
+struct Event: Codable {
   let description: String?
 }

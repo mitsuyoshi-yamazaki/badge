@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Achievement {
+struct Achievement: Codable {
   let title: String
   var events: [Event]
   
