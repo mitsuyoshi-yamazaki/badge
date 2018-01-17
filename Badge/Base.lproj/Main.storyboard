@@ -71,11 +71,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ojf-rq-58f">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="hJh-Mk-4Vo"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Wl-ky-lxe"/>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="5Wl-ky-lxe" id="vrN-qx-8HS"/>
                         <outlet property="collectionView" destination="8Iw-uU-TjX" id="gJ8-qt-QxE"/>
+                        <outlet property="exportButton" destination="hJh-Mk-4Vo" id="2RI-So-yHj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
