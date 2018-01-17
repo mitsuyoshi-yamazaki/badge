@@ -56,11 +56,16 @@ final class NewAchievementViewController: UITableViewController {
     let doneButtonTap = doneButton.rx.tap.asDriver()
       .map { [weak self] _ -> Achievement? in
         guard
-          let title = self?.titleTextField.text
+          let title = self?.titleTextField.text,
+          let copper = UInt(self?.copperThresholdTextField.text ?? ""),
+          let silver = UInt(self?.silverThresholdTextField.text ?? ""),
+          let gold = UInt(self?.goldThresholdTextField.text ?? ""),
+          let platinum = UInt(self?.platinumThresholdTextField.text ?? ""),
+          let onyx = UInt(self?.onyxThresholdTextField.text ?? "")
         else {
             return nil
         }
-        return Achievement.init(title: title, events: [])
+        return Achievement.init(title: title, events: [], copperThreshold: copper, silverThreshold: silver, goldThreshold: gold, platinumThreshold: platinum, onyxThreshold: onyx)
       }
       .filterNil()
       
