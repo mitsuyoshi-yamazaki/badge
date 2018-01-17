@@ -32,7 +32,7 @@ final class NewAchievementViewController: UITableViewController {
     super.viewDidLoad()
    
     let validators: [Observable<Bool>] = [
-      titleTextField.rx.text.map { $0?.isEmpty ?? false }
+      titleTextField.rx.text.map { $0?.isNotEmpty ?? false }
     ]
     Observable<Bool>
       .combineLatest(validators) { validationResults -> Bool in
