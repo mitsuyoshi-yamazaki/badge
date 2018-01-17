@@ -31,14 +31,19 @@ final class NewAchievementViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
    
+    let isValidThresholdText = { (text: String?) -> Bool in
+      return UInt(text ?? "") != nil
+    }
+    
     let validators: [Observable<Bool>] = [
       titleTextField.rx.text.map { $0?.isNotEmpty ?? false },  // TODO: Validate no duplication
-      copperThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
-      silverThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
-      goldThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
-      platinumThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
-      onyxThresholdTextField.rx.text.map { $0?.isNotEmpty ?? false },
+      copperThresholdTextField.rx.text.map(isValidThresholdText), // TODO: Validate threshold order
+      silverThresholdTextField.rx.text.map(isValidThresholdText),
+      goldThresholdTextField.rx.text.map(isValidThresholdText),
+      platinumThresholdTextField.rx.text.map(isValidThresholdText),
+      onyxThresholdTextField.rx.text.map(isValidThresholdText),
     ]
+    
     Observable<Bool>
       .combineLatest(validators) { validationResults -> Bool in
         let isInvalid = validationResults.contains { $0 == false }
