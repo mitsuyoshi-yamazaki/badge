@@ -23,6 +23,7 @@
 		EDE3F82720060FD500D8D760 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE3F82620060FD500D8D760 /* UIViewControllerExtensions.swift */; };
 		EDE3F82920061F7200D8D760 /* DependencyInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE3F82820061F7200D8D760 /* DependencyInjectable.swift */; };
 		EDE3F82B20061F8C00D8D760 /* IBInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE3F82A20061F8C00D8D760 /* IBInstantiatable.swift */; };
+		EDE3F8512010207200D8D760 /* BadgeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE3F8502010207200D8D760 /* BadgeExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		EDE3F82620060FD500D8D760 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		EDE3F82820061F7200D8D760 /* DependencyInjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectable.swift; sourceTree = "<group>"; };
 		EDE3F82A20061F8C00D8D760 /* IBInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBInstantiatable.swift; sourceTree = "<group>"; };
+		EDE3F8502010207200D8D760 /* BadgeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				EDE3F82620060FD500D8D760 /* UIViewControllerExtensions.swift */,
 				EDE3F82820061F7200D8D760 /* DependencyInjectable.swift */,
 				EDE3F82A20061F8C00D8D760 /* IBInstantiatable.swift */,
+				EDE3F8502010207200D8D760 /* BadgeExtensions.swift */,
 				ED2BE4361FFE335D005C6939 /* Assets.xcassets */,
 				ED2BE4381FFE335D005C6939 /* LaunchScreen.storyboard */,
 				ED2BE43B1FFE335D005C6939 /* Info.plist */,
@@ -482,6 +485,7 @@
 			files = (
 				EDE3F82920061F7200D8D760 /* DependencyInjectable.swift in Sources */,
 				EDE3F8232004CDF700D8D760 /* Event.swift in Sources */,
+				EDE3F8512010207200D8D760 /* BadgeExtensions.swift in Sources */,
 				EDE3F82520060F7200D8D760 /* NewAchievementViewController.swift in Sources */,
 				ED2BE4301FFE335C005C6939 /* AppDelegate.swift in Sources */,
 				EDE3F81F2004C83600D8D760 /* AchievementListViewController.swift in Sources */,
