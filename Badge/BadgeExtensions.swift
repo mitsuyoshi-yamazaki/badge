@@ -30,3 +30,46 @@ extension BadgeExtensionCompatible {
     return BadgeExtension(self)
   }
 }
+
+extension UIColor: BadgeExtensionCompatible {}
+extension BadgeExtension where Base: UIColor {
+  static var lightCopper: UIColor {
+    return UIColor(decimalRed: 208, green: 143, blue: 111, alpha: 1.0)
+  }
+  
+  static var lightSilver: UIColor {
+    return UIColor(decimalRed: 153, green: 176, blue: 182, alpha: 1.0)
+  }
+  
+  static var lightGold: UIColor {
+    return UIColor(decimalRed: 251, green: 212, blue: 137, alpha: 1.0)
+  }
+
+  static var lightPlatinum: UIColor {
+    return UIColor.white
+  }
+
+  static var lightOnyx: UIColor {
+    return UIColor.black
+  }
+  
+  static var copper: UIColor {
+    return UIColor(decimalRed: 74, green: 32, blue: 12, alpha: 1.0)
+  }
+  
+  static var silver: UIColor {
+    return UIColor(decimalRed: 58, green: 66, blue: 67, alpha: 1.0)
+  }
+  
+  static var gold: UIColor {
+    return UIColor(decimalRed: 107, green: 77, blue: 39, alpha: 1.0)
+  }
+  
+  static var platinum: UIColor {
+    return UIColor.white
+  }
+  
+  static var onyx: UIColor {
+    return UIColor.black
+  }
+}
