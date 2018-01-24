@@ -322,6 +322,77 @@
             </objects>
             <point key="canvasLocation" x="159" y="152"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="Vbl-PZ-JIn">
+            <objects>
+                <tableViewController storyboardIdentifier="NewProgressViewController" id="vps-ID-0yS" customClass="NewProgressViewController" customModule="Badge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ShH-Ta-Lt1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Basic Info" id="33x-MZ-YC9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="xLB-xu-5Mu">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLB-xu-5Mu" id="bYZ-N4-U7Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6x-fu-Cir">
+                                                    <rect key="frame" x="106" y="7" width="254" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oo-Ak-BCv">
+                                                    <rect key="frame" x="16" y="13.5" width="82" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="82" id="9nn-Ds-Kjg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F6x-fu-Cir" firstAttribute="leading" secondItem="3oo-Ak-BCv" secondAttribute="trailing" constant="8" id="9UU-hK-MZZ"/>
+                                                <constraint firstItem="3oo-Ak-BCv" firstAttribute="leading" secondItem="bYZ-N4-U7Q" secondAttribute="leading" constant="16" id="JEv-0v-DVc"/>
+                                                <constraint firstAttribute="trailing" secondItem="F6x-fu-Cir" secondAttribute="trailing" constant="15" id="gwJ-Nl-7TP"/>
+                                                <constraint firstItem="F6x-fu-Cir" firstAttribute="centerY" secondItem="bYZ-N4-U7Q" secondAttribute="centerY" id="qHK-KL-1V7"/>
+                                                <constraint firstItem="3oo-Ak-BCv" firstAttribute="centerY" secondItem="bYZ-N4-U7Q" secondAttribute="centerY" id="uiB-kJ-hWu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="vps-ID-0yS" id="1UF-B2-xji"/>
+                            <outlet property="delegate" destination="vps-ID-0yS" id="rV9-tG-BTw"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="abO-6W-V6s">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Pml-Bt-EnJ">
+                            <connections>
+                                <action selector="dismissWithSender:" destination="vps-ID-0yS" id="8pc-c2-BCZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="hJK-WC-PlX"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="F6x-fu-Cir" id="xrN-RX-Qwv"/>
+                        <outlet property="doneButton" destination="hJK-WC-PlX" id="Ir2-dT-mod"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gbp-p2-wNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="878"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="HyB-HC-Hrw">
             <objects>

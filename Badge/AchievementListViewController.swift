@@ -28,6 +28,7 @@ final class AchievementListViewController: UIViewController {
         return
       }
       saveAchievements()
+      collectionView?.reloadData()
     }
   }
   
@@ -134,4 +135,17 @@ extension AchievementListViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension AchievementListViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let achievement = achievements[indexPath.item]
+    let newProgressViewController = NewProgressViewController.instantiate(with: .init(achievement: achievement))
+    
+    newProgressViewController.newEventDriver
+      .drive(onNext: { [weak self] event in
+        self?.achievements[indexPath.item].events.append(event)
+      })
+      .disposed(by: newProgressViewController.disposeBag)
+    
+    let navigationController = UINavigationController.init(rootViewController: newProgressViewController)
+    present(navigationController, animated: true, completion: nil)
+  }
 }

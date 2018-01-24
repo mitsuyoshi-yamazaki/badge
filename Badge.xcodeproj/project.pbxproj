@@ -10,6 +10,7 @@
 		1479964BBEE4CFEBFF0476D2 /* Pods_BadgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45789D4E13D8315C856E1A6B /* Pods_BadgeUITests.framework */; };
 		7262074E3DC634290C5CEFC9 /* Pods_Badge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCAEAED4AA0AFE2988C4BAD /* Pods_Badge.framework */; };
 		E6B1937F09341AD165D400E4 /* Pods_BadgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8CBB0BE65D54FF0F2B5861 /* Pods_BadgeTests.framework */; };
+		ED046EF3201895CB009DD602 /* NewProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED046EF2201895CB009DD602 /* NewProgressViewController.swift */; };
 		ED2BE4301FFE335C005C6939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BE42F1FFE335C005C6939 /* AppDelegate.swift */; };
 		ED2BE4351FFE335D005C6939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2BE4331FFE335D005C6939 /* Main.storyboard */; };
 		ED2BE4371FFE335D005C6939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2BE4361FFE335D005C6939 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		BB8CBB0BE65D54FF0F2B5861 /* Pods_BadgeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadgeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3514E072FD2F3CA668AD490 /* Pods-Badge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Badge/Pods-Badge.debug.xcconfig"; sourceTree = "<group>"; };
 		D3F6DBC8F1997C7DC301190F /* Pods-BadgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadgeUITests/Pods-BadgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED046EF2201895CB009DD602 /* NewProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProgressViewController.swift; sourceTree = "<group>"; };
 		ED2BE42C1FFE335C005C6939 /* Badge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2BE42F1FFE335C005C6939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED2BE4341FFE335D005C6939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				ED2BE4331FFE335D005C6939 /* Main.storyboard */,
 				EDE3F82420060F7200D8D760 /* NewAchievementViewController.swift */,
 				EDE3F81E2004C83600D8D760 /* AchievementListViewController.swift */,
+				ED046EF2201895CB009DD602 /* NewProgressViewController.swift */,
 				EDE3F8202004CDF100D8D760 /* Achievement.swift */,
 				EDE3F8222004CDF700D8D760 /* Event.swift */,
 				EDE3F82620060FD500D8D760 /* UIViewControllerExtensions.swift */,
@@ -486,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED046EF3201895CB009DD602 /* NewProgressViewController.swift in Sources */,
 				EDE3F82920061F7200D8D760 /* DependencyInjectable.swift in Sources */,
 				EDE3F8232004CDF700D8D760 /* Event.swift in Sources */,
 				EDE3F8512010207200D8D760 /* BadgeExtensions.swift in Sources */,
