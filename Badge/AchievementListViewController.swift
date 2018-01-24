@@ -124,6 +124,9 @@ extension AchievementListViewController: UICollectionViewDataSource {
     let achievement = achievements[indexPath.item]
     
     cell.titleLabel.text = "\(achievement.title)\n(\(achievement.progress))"
+    cell.contentView.backgroundColor = achievement.medal.color
+    cell.contentView.layer.borderWidth = 2.0
+    cell.contentView.layer.borderColor = achievement.medal.lightColor.cgColor
     
     return cell
   }
