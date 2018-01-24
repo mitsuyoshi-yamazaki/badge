@@ -33,6 +33,10 @@ extension BadgeExtensionCompatible {
 
 extension UIColor: BadgeExtensionCompatible {}
 extension BadgeExtension where Base: UIColor {
+  static var lightUnstarted: UIColor {
+    return UIColor.init(white: 0.8, alpha: 1.0)
+  }
+  
   static var lightCopper: UIColor {
     return UIColor(decimalRed: 208, green: 143, blue: 111, alpha: 1.0)
   }
@@ -52,7 +56,11 @@ extension BadgeExtension where Base: UIColor {
   static var lightOnyx: UIColor {
     return UIColor.black
   }
-  
+
+  static var unstarted: UIColor {
+    return UIColor.init(white: 0.5, alpha: 1.0)
+  }
+
   static var copper: UIColor {
     return UIColor(decimalRed: 74, green: 32, blue: 12, alpha: 1.0)
   }
