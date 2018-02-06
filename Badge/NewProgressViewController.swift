@@ -41,6 +41,8 @@ final class NewProgressViewController: UITableViewController {
       .map { _ in }
       .drive(self.rx.dismiss)
       .disposed(by: disposeBag)
+    
+    descriptionTextField.becomeFirstResponder()
   }
 }
 

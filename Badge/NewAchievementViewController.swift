@@ -77,6 +77,8 @@ final class NewAchievementViewController: UITableViewController {
       .map { _ in }
       .drive(self.rx.dismiss)
       .disposed(by: disposeBag)
+    
+    titleTextField.becomeFirstResponder()
   }
 }
 
