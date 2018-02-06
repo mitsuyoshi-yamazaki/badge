@@ -10,4 +10,5 @@ import Foundation
 
 struct Event: Codable {
   let description: String?
+  let createdAt: Date
 }

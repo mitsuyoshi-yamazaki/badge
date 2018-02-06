@@ -30,7 +30,7 @@ final class NewProgressViewController: UITableViewController {
     
     let doneButtonTap = doneButton.rx.tap.asDriver()
       .map { [weak self] _ -> Event in
-        return Event.init(description: self?.descriptionTextField.text)
+        return Event.init(description: self?.descriptionTextField.text, createdAt: Date())
       }
 
     doneButtonTap
